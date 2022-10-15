@@ -86,15 +86,4 @@ public class Deformation : MonoBehaviour
             }
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            _mesh.vertices = _meshOnStart;
-            _mesh.RecalculateNormals();
-            _mesh.RecalculateBounds();
-            GetComponent<MeshCollider>().sharedMesh = _mesh;
-        }
-    }
 }
